@@ -16,17 +16,26 @@ export const StateTutorial = () => {
         console.log(counter + 1); // Log the incremented value
     }
 
+    const clearAll =() => {
+        setText(0);
+        setCounter(0);
+    }
+
+
     return (
         <>
             <div>
                 <div>
                     <h2>Start Value</h2>
-                    <input placeholder="Enter Value" onChange={e => setText(e.target.value)} value={text}/>
+                    <input placeholder="Enter Value" onChange={e => setText(e.target.value)} value={text}/><br/>
                     <button onClick={setvalue}>Set Value</button>
                 </div>
                 <h1>Counter Value: {counter}</h1>
                 <button onClick={increment}>Increase</button>
+
             </div>
+            <br/>
+            <button onClick={clearAll}>Clear All</button>
         </>
     )
 }
