@@ -2,16 +2,27 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 export const EffectTutorial = () => {
-    const [data, setData] = useState()
+    const [data, setData] = useState([]);
     useEffect(() => {
         console.log("Hi");
         axios
-        .get("https://jsonplaceholder.typicode.com/todos/1")
+        .get("https://reqres.in/api/users?page=2")
         .then((response) => {
-            setData(response.data.title);
+            setData(response.data.data)
+            console.log(response.data);
         })
-    });
-    return(
-        <div>Hello World!!</div>
-    )
+    },[]);
+    return (
+        <div>
+            <h1>Hello</h1>
+            <ul>
+                {data.map((item, index) => (
+                    <li key={index} className="List">
+                        {item.first_name} {item.last_name}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+
 }

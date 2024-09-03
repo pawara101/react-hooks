@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.List {
+  text-align: left;
+  font-family: Consolas;
+}
