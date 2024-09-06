@@ -14,11 +14,11 @@ export const EffectTutorial = () => {
     },[]);
     return (
         <div>
-            <h1>Hello</h1>
+            <h1>Students</h1>
             <ul>
                 {data.map((item, index) => (
                     <li key={index} className="List">
-                        {item.first_name} {item.last_name}
+                        {item.first_name} {item.last_name} | email : {item.email}
                     </li>
                 ))}
             </ul>
