@@ -3,6 +3,7 @@ import axios from 'axios'
 
 export const EffectTutorial = () => {
     const [data, setData] = useState([]);
+    const [clicked, setClicked] = useState(false);
     useEffect(() => {
         console.log("Hi");
         axios
@@ -12,16 +13,23 @@ export const EffectTutorial = () => {
             console.log(response.data);
         })
     },[]);
+
+    const getNames = () => {
+        console.log("Get Names");
+        setClicked(true)
+    };
     return (
         <div>
             <h1>Students</h1>
-            <ul>
+            <button onClick={() => getNames()}>Names</button>
+            {clicked && <ul>
                 {data.map((item, index) => (
                     <li key={index} className="List">
-                        {item.first_name} {item.last_name} | email : {item.email}
+                        {item.first_name} {item.last_name}
                     </li>
                 ))}
-            </ul>
+            </ul>}
+
         </div>
     );
 
