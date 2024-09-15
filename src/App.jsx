@@ -5,13 +5,14 @@ import './App.css'
 import {StateTutorial} from "./components/hooks/StateTutorial.jsx";
 import { ReducerTutorial } from './components/hooks/ReducerTutorial.jsx';
 import { EffectTutorial } from './components/hooks/EffectTutorial.jsx';
+import { RefTutorial } from "./components/hooks/RefTutorial.jsx";
 
 function App() {
 
   return (
     <>
       <div className="card">
-            <EffectTutorial/>
+            <RefTutorial/>
       </div>
     </>
   )
