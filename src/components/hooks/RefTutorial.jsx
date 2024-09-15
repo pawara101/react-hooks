@@ -5,6 +5,8 @@ export const RefTutorial = () => {
     const inputRef = useRef(null);
     const ChangeName = () => {
         console.log(inputRef.current.value); // Use inputRef.current.value to access the value.
+        inputRef.current.focus();
+        // inputRef.current.value = ""; // to clear
     }
     return(
         <>
