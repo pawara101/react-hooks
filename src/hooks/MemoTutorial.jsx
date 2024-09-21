@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {useMemo, useState} from 'react';
 /*
-* UseMemo : to
+* UseMemo : to stop re-rendering when clicking Counter ++ button
+* for performance concerns
 * */
 export function MemoTutorial() {
     const [number, setNumber] = useState(0);
@@ -11,7 +12,7 @@ export function MemoTutorial() {
         return Math.pow(num, 3)
     }
 
-    const result = cubeNum(number)
+    const result = useMemo(()=>{return cubeNum(number)}, [number])
     return (
         <>
         <input type= "number" onChange={ (e)=> {setNumber(e.target.value)}}/>
