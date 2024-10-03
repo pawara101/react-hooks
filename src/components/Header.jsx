@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Header = () => {
+const Header = () => {
     console.log("Header Rendered");
     return(
         <div>
@@ -8,3 +8,5 @@ export const Header = () => {
         </div>
     )
 }
+
+export default React.memo(Header);
