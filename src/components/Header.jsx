@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+export const Header = () => {
     console.log("Header Rendered");
     return(
         <div>
