@@ -7,13 +7,14 @@ import { RefTutorial } from "./hooks/RefTutorial.jsx";
 import { LayoutEffectTutorial } from './hooks/LayoutEffectTutorial.jsx';
 import { MemoTutorial } from './hooks/MemoTutorial.jsx';
 import { CallbackTutorial } from './hooks/CallbackTutorial.jsx';
+import { ContextTutorial } from './hooks/ContextTutorial.jsx';
 
 function App() {
 
   return (
     <>
       <div className="card">
-            <CallbackTutorial></CallbackTutorial>
+            <ContextTutorial></ContextTutorial>
       </div>
     </>
   )
