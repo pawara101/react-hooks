@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-
+// check link : https://youtu.be/6wf5dIrryoQ?t=6492
 const reducer = (state, action) => {
     switch (action.type) {
         case 'INCREMENT':
